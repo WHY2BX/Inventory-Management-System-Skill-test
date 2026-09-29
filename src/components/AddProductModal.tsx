@@ -83,7 +83,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
               onChange={handleChange}
               required
               placeholder="เช่น Notebook Dell Inspiron 15"
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
 
@@ -96,7 +96,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
                 onChange={handleChange}
                 required
                 placeholder="เช่น DELL-INS-001"
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
             <div>
@@ -110,7 +110,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
                 onChange={handleChange}
                 required
                 placeholder="0.00"
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
                 min="0"
                 value={form.stockQuantity}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
             <div>
@@ -134,7 +134,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
                 value={form.categoryId}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500 bg-white"
               >
                 <option value="">เลือกหมวดหมู่</option>
                 {categories.map((c) => (
@@ -161,7 +161,7 @@ export default function AddProductModal({ onClose, onSuccess }: Props) {
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors"
+              className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors"
             >
               {loading ? 'กำลังบันทึก...' : 'บันทึกสินค้า'}
             </button>

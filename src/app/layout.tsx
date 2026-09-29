@@ -1,9 +1,6 @@
-import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+﻿import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/Sidebar'
-
-const geist = Geist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Inventory Management System',
@@ -17,10 +14,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th">
-      <body className={`${geist.className} bg-gray-50 min-h-screen`}>
-        <div className="flex h-screen overflow-hidden">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className="bg-white text-gray-900" style={{ fontFamily: "'Noto Sans Thai', sans-serif" }}>
+        <div className="flex h-screen overflow-hidden bg-gray-50">
           <Sidebar />
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto bg-white">
             {children}
           </main>
         </div>

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useState } from 'react'
 import { ArrowUpCircle, ArrowDownCircle, Filter, Plus } from 'lucide-react'
@@ -56,7 +56,7 @@ export default function TransactionsPage() {
           </div>
           <button
             onClick={() => setShowAdd(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm"
+            className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm"
           >
             <Plus className="w-4 h-4" />
             เพิ่มประวัติ รับ-จ่าย
@@ -76,7 +76,7 @@ export default function TransactionsPage() {
               onClick={() => handleTypeChange(f.value)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors ${
                 typeFilter === f.value
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-red-600 text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -192,3 +192,4 @@ export default function TransactionsPage() {
     </>
   )
 }
+

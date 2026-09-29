@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import { X, TrendingUp, TrendingDown, Search } from 'lucide-react'
@@ -86,7 +86,7 @@ export default function AddTransactionModal({ onClose, onSuccess }: Props) {
                 onChange={(e) => { setSearch(e.target.value); setSelectedProduct(null); setShowDropdown(true) }}
                 onFocus={() => setShowDropdown(true)}
                 placeholder="ค้นหาชื่อสินค้า หรือ SKU..."
-                className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
             {showDropdown && (
@@ -98,7 +98,7 @@ export default function AddTransactionModal({ onClose, onSuccess }: Props) {
                 ) : (
                   products.map((p) => (
                     <button key={p.id} type="button" onClick={() => handleSelectProduct(p)}
-                      className="w-full text-left px-4 py-3 hover:bg-blue-50 transition-colors border-b border-gray-50 last:border-0">
+                      className="w-full text-left px-4 py-3 hover:bg-red-50 transition-colors border-b border-gray-50 last:border-0">
                       <p className="text-sm font-medium text-gray-900">{p.name}</p>
                       <p className="text-xs text-gray-400 font-mono mt-0.5">{p.sku} · สต็อก: {p.stockQuantity}</p>
                     </button>
@@ -133,7 +133,7 @@ export default function AddTransactionModal({ onClose, onSuccess }: Props) {
             <label className="block text-sm font-medium text-gray-700 mb-1.5">จำนวน <span className="text-red-500">*</span> <span className="text-gray-400 text-xs">(ใส่ - สำหรับตัดออก)</span></label>
             <input type="number" value={adjustment} onChange={(e) => setAdjustment(e.target.value)}
               placeholder="เช่น +10 หรือ -5"
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500" />
           </div>
           {selectedProduct && adjNum !== 0 && (
             <div className={`flex items-center gap-3 p-3.5 rounded-xl border ${newStock < 0 ? 'bg-red-50 border-red-200' : adjNum > 0 ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'}`}>
@@ -150,14 +150,14 @@ export default function AddTransactionModal({ onClose, onSuccess }: Props) {
             <label className="block text-sm font-medium text-gray-700 mb-1.5">เหตุผล <span className="text-gray-400 text-xs">(ไม่บังคับ)</span></label>
             <input value={reason} onChange={(e) => setReason(e.target.value)}
               placeholder="เช่น รับของจากซัพพลายเออร์, ขายให้ลูกค้า"
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500" />
           </div>
           {error && <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">{error}</div>}
           <div className="flex gap-3 pt-1">
             <button type="button" onClick={onClose}
               className="flex-1 py-2.5 border border-gray-200 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors">ยกเลิก</button>
             <button type="submit" disabled={loading || !selectedProduct || adjNum === 0 || newStock < 0}
-              className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors">
+              className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors">
               {loading ? 'กำลังบันทึก...' : 'บันทึกรายการ'}
             </button>
           </div>

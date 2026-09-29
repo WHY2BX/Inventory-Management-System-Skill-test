@@ -106,7 +106,7 @@ export default function StockAdjustModal({ product, onClose, onSuccess }: Props)
               value={adjustment}
               onChange={(e) => setAdjustment(e.target.value)}
               placeholder="เช่น +10 หรือ -5"
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function StockAdjustModal({ product, onClose, onSuccess }: Props)
               value={reason}
               onChange={(e) => setReason(e.target.value)}
               placeholder="เช่น รับของจากซัพพลายเออร์, ขายให้ลูกค้า"
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
 
@@ -159,7 +159,7 @@ export default function StockAdjustModal({ product, onClose, onSuccess }: Props)
             <button
               type="submit"
               disabled={loading || adjNum === 0 || newStock < 0}
-              className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors"
+              className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-medium transition-colors"
             >
               {loading ? 'กำลังบันทึก...' : 'ยืนยันการปรับสต็อก'}
             </button>

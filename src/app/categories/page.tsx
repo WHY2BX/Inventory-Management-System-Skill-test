@@ -55,7 +55,7 @@ export default function CategoriesPage() {
   }
 
   const colorMap: Record<number, string> = {
-    0: 'bg-blue-100 text-blue-700',
+    0: 'bg-red-100 text-red-700',
     1: 'bg-purple-100 text-purple-700',
     2: 'bg-green-100 text-green-700',
     3: 'bg-amber-100 text-amber-700',
@@ -72,7 +72,7 @@ export default function CategoriesPage() {
         </div>
         <button
           onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm"
+          className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm"
         >
           <Plus className="w-4 h-4" />
           เพิ่มหมวดหมู่
@@ -91,7 +91,7 @@ export default function CategoriesPage() {
                 onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
                 required
                 placeholder="เช่น IT, Office Supply, Furniture"
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
             <div className="flex-1 min-w-48">
@@ -100,14 +100,14 @@ export default function CategoriesPage() {
                 value={form.description}
                 onChange={(e) => setForm((p) => ({ ...p, description: e.target.value }))}
                 placeholder="คำอธิบายสั้นๆ (ไม่บังคับ)"
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
             <div className="flex gap-2">
               <button type="button" onClick={() => setShowForm(false)} className="px-4 py-2 border border-gray-200 rounded-lg text-sm text-gray-600 hover:bg-gray-50">
                 ยกเลิก
               </button>
-              <button type="submit" disabled={saving} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm disabled:bg-gray-300">
+              <button type="submit" disabled={saving} className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm disabled:bg-gray-300">
                 {saving ? 'กำลังบันทึก...' : 'บันทึก'}
               </button>
             </div>

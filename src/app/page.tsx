@@ -93,7 +93,7 @@ export default function DashboardPage() {
               icon={Package}
               label="สินค้าทั้งหมด"
               value={summary?.totalProducts ?? 0}
-              color="bg-blue-500"
+              color="bg-red-500"
               href="/products"
             />
             <StatCard
@@ -122,7 +122,7 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
             <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
               <h2 className="text-base font-semibold text-gray-900">รายการล่าสุด</h2>
-              <Link href="/transactions" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+              <Link href="/transactions" className="text-sm text-red-600 hover:text-red-700 font-medium">
                 ดูทั้งหมด →
               </Link>
             </div>

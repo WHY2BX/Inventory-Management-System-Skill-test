@@ -27,7 +27,7 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="px-6 py-5 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
+          <div className="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center">
             <Package className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -47,13 +47,13 @@ export default function Sidebar() {
               href={href}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all group ${
                 active
-                  ? 'bg-blue-50 text-blue-700'
+                  ? 'bg-red-50 text-red-700'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
               }`}
             >
-              <Icon className={`w-4.5 h-4.5 ${active ? 'text-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`} size={18} />
+              <Icon className={`w-4.5 h-4.5 ${active ? 'text-red-600' : 'text-gray-400 group-hover:text-gray-600'}`} size={18} />
               <span className="flex-1">{label}</span>
-              {active && <ChevronRight className="w-3.5 h-3.5 text-blue-400" />}
+              {active && <ChevronRight className="w-3.5 h-3.5 text-red-400" />}
             </Link>
           )
         })}
